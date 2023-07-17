@@ -1,0 +1,48 @@
+.stage{
+    margin: 0 auto;
+    width: 1600px;
+    height:550px ;
+    border: 2px solid black;
+}
+.bat{
+ transition: transform 0.2s ease-out 2.3s;
+}
+.stage:hover .bat{
+    transform: rotate(-60deg);
+    transform-origin:top right;
+}
+.ball{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left: 1500px;
+    bottom: 300px;
+}
+.stage:hover .ball{
+    animation: bounce 3s ease-in 1s 1 ;
+}
+
+@keyframes bounce{
+    0%{
+        bottom: 300px;
+        left: 1500px;
+    }
+    25%{
+        bottom: 0px;
+        left: 900px;
+    }
+    50%{
+        bottom: 60px;
+        left:490px;
+    }
+    75%{
+        bottom:300px ;
+        left: 1600px;
+    }
+    100%{
+        bottom: 300px;
+        left: 1500px;
+    }
+}
